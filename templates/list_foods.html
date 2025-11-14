@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ meal.title() }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>{{ meal.title() }}</h1>
+  <p>
+    {% if meal == "desayuno" %} Breakfast 
+    {% elif meal == "almuerzo" %} Lunch 
+    {% else %} Dinner 
+    {% endif %}
+  </p>
+</header>
+
+<div class="list-container">
+
+  {% for food, details in foods.items() %}
+  <a href="/recipe/{{ meal }}/{{ food }}" class="food-card">
+    <img src="{{ url_for('static', filename='images/' + details['image']) }}">
+    <h2>{{ food }}</h2>
+  </a>
+  {% endfor %}
+
+</div>
+
+</body>
+</html>

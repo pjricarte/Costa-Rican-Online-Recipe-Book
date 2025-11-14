@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ food }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>{{ food }}</h1>
+  <p>{{ food }}</p>
+</header>
+
+<div class="recipe-container">
+
+  <img src="{{ url_for('static', filename='images/' + data['image']) }}" class="recipe-img">
+
+  <div class="recipe-section">
+    <h2>Ingredientes</h2>
+    <ul>
+      {% for item in data['ingredients_es'] %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <p class="sub">English:</p>
+    <ul>
+      {% for item in data['ingredients_en'] %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="recipe-section">
+    <h2>Preparación</h2>
+    <ol>
+      {% for step in data['steps_es'] %}
+      <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+    <p class="sub">English:</p>
+    <ol>
+      {% for step in data['steps_en'] %}
+      <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+
+</div>
+
+</body>
+</html>

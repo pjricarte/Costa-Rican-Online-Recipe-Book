@@ -1,53 +1,126 @@
+/* GENERAL */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
 }
 
-header {
+/* HEADER */
+.header {
   background: #0b6e4f;
   color: white;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
 }
 
-nav {
-  background: #08543a;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
+/* WELCOME PAGE */
+.welcome-body {
+  margin: 0;
+  overflow: hidden;
 }
 
-nav a {
+.slideshow-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.welcome-overlay {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
   color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+.enter-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #0b6e4f;
+  color: white;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 8px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+/* CATEGORY PAGE */
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.category-card {
+  width: 30%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.cat-label {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* LIST FOODS */
+.list-container {
   padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.recipe-card {
+.food-card {
   background: white;
-  border-radius: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.food-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* RECIPE PAGE */
+.recipe-container {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.recipe-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.recipe-section {
+  background: white;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
-.recipe-card h2 {
-  color: #0b6e4f;
-}
-
-footer {
-  background: #083f2d;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+.sub {
+  margin-top: 15px;
+  font-weight: bold;
 }

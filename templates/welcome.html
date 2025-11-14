@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenidos / Welcome</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='slideshow.js') }}" defer></script>
+</head>
+
+<body class="welcome-body">
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='images/gallo_pinto.jpg') }}" class="slide-img">
+    </div>
+
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='images/sopa-de-tortilla.jpg') }}" class="slide-img">
+    </div>
+
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='images/casado.webp') }}" class="slide-img">
+    </div>
+  </div>
+
+  <div class="welcome-overlay">
+    <h1>Libro de Recetas de Costa Rica</h1>
+    <p>Costa Rican Recipe Book</p>
+    <a href="/categories" class="enter-btn">Entrar / Enter</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Categorías de Comidas</h1>
+  <p>Food Categories</p>
+</header>
+
+<div class="category-container">
+
+  <a href="/list/desayuno" class="category-card" style="background-image: url('{{ url_for('static', filename='images/breakfast.webp') }}');">
+    <div class="cat-label">
+      <h2>Desayuno</h2>
+      <p>Breakfast</p>
+    </div>
+  </a>
+
+  <a href="/list/almuerzo" class="category-card" style="background-image: url('{{ url_for('static', filename='images/lunch.jpg') }}');">
+    <div class="cat-label">
+      <h2>Almuerzo</h2>
+      <p>Lunch</p>
+    </div>
+  </a>
+
+  <a href="/list/cena" class="category-card" style="background-image: url('{{ url_for('static', filename='images/dinner.jpg') }}');">
+    <div class="cat-label">
+      <h2>Cena</h2>
+      <p>Dinner</p>
+    </div>
+  </a>
+
+</div>
+
+</body>
+</html>
