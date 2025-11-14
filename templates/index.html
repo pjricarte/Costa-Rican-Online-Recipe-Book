@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Costa Rican Recipe Book</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1>Libro de Recetas de Costa Rica</h1>
+    <p>Costa Rican Recipe Book</p>
+  </header>
+
+  <nav>
+    <a href="#desayuno">Desayuno</a>
+    <a href="#almuerzo">Almuerzo</a>
+    <a href="#cena">Cena</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Breakfast -->
+    <section id="desayuno">
+      <h2>🍳 Desayuno / Breakfast</h2>
+
+      {% for r in recipes['desayuno'] %}
+      <div class="recipe-card">
+        <h2>{{ r.name }}</h2>
+        <h4>"{{ r.es }}" <br> "{{ r.en }}"</h4>
+      </div>
+      {% endfor %}
+    </section>
+
+    <!-- Lunch -->
+    <section id="almuerzo">
+      <h2>🍽️ Almuerzo / Lunch</h2>
+
+      {% for r in recipes['almuerzo'] %}
+      <div class="recipe-card">
+        <h2>{{ r.name }}</h2>
+        <h4>"{{ r.es }}" <br> "{{ r.en }}"</h4>
+      </div>
+      {% endfor %}
+    </section>
+
+    <!-- Dinner -->
+    <section id="cena">
+      <h2>🍛 Cena / Dinner</h2>
+
+      {% for r in recipes['cena'] %}
+      <div class="recipe-card">
+        <h2>{{ r.name }}</h2>
+        <h4>"{{ r.es }}" <br> "{{ r.en }}"</h4>
+      </div>
+      {% endfor %}
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Costa Rican Recipe Book</p>
+  </footer>
+</body>
+</html>
