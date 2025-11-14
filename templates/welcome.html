@@ -31,5 +31,30 @@
     <a href="/categories" class="enter-btn">Entrar / Enter</a>
   </div>
 
+  <script>
+  // Wait until the page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    const enterBtn = document.querySelector('.enter-btn');
+
+    // Add a small pulse animation every 2 seconds
+    setInterval(() => {
+      enterBtn.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        enterBtn.style.transform = 'scale(1)';
+      }, 300);
+    }, 2000);
+
+    // Add click effect
+    enterBtn.addEventListener('click', function() {
+      enterBtn.textContent = "Entering..."; // Change button text
+      enterBtn.style.background = "#073d27"; // Darken on click
+      // Redirect to another page after a short delay
+      setTimeout(() => {
+        window.location.href = "category.html"; // change to your target page
+      }, 500);
+    });
+  });
+</script>
+
 </body>
 </html>
