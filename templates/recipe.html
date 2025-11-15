@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ food }}</title>
+  <title>Recetas de Desayuno, Almuerzo y Cena</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
 <header class="header">
-  <h1>{{ food }}</h1>
-  <p>{{ food }}</p>
+  <h1>Recetas Costarricenses</h1>
+  <p>Gallo Pinto</p>
 </header>
 
 <div class="recipe-container">
 
-  <img src="{{ url_for('static', filename='images/' + data['image']) }}" class="recipe-img">
+  <img src="{{ url_for('static', filename='images/gallo_pinto.jpg') }}" class="recipe-img">
 
   <div class="recipe-section">
-    <h2>Ingredientes</h2>
+    <h2>Gallo Pinto</h2>
+    <h3>Ingredientes</h3>
     <ul>
-      {% for item in data['ingredients_es'] %}
-      <li>{{ item }}</li>
-      {% endfor %}
+      <li>2 tazas de arroz cocido</li>
+      <li>1½ tazas de frijoles negros cocidos (con un poco de líquido)</li>
+      <li>1 cebolla pequeña, picada</li>
+      <li>½ pimentón rojo, picado</li>
+      <li>2 cucharadas de cilantro, picado</li>
+      <li>1-2 cucharadas de Salsa Lizano</li>
+      <li>1 cucharada de aceite</li>
+      <li>Sal y pimienta al gusto</li>
     </ul>
-    <p class="sub">English:</p>
-    <ul>
-      {% for item in data['ingredients_en'] %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="recipe-section">
-    <h2>Preparación</h2>
+    <h3>Preparación</h3>
     <ol>
-      {% for step in data['steps_es'] %}
-      <li>{{ step }}</li>
-      {% endfor %}
-    </ol>
-    <p class="sub">English:</p>
-    <ol>
-      {% for step in data['steps_en'] %}
-      <li>{{ step }}</li>
-      {% endfor %}
+      <li>Calienta el aceite en una sartén.</li>
+      <li>Sofríe la cebolla y el pimentón hasta que estén suaves.</li>
+      <li>Agrega los frijoles negros cocidos (con un poco de líquido) y calienta bien.</li>
+      <li>Agrega el arroz cocido y mezcla bien.</li>
+      <li>Agrega Salsa Lizano, sal y pimienta.</li>
+      <li>Cocina durante unos minutos, removiendo hasta que todo esté bien combinado.</li>
+      <li>Agrega el cilantro picado justo antes de servir.</li>
     </ol>
   </div>
 
 </div>
 
 </body>
-</html>
